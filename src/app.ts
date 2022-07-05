@@ -1,7 +1,7 @@
 class Department {
   private employees: string[] = [];
 
-  constructor(private id: string, public name: string) {}
+  constructor(private readonly id: string, public name: string) {}
 
   describe(this: Department) {
     console.log(`Department (${this.id}): ${this.name}`);
@@ -9,6 +9,7 @@ class Department {
 
   addEmployee(employee: string) {
     // validation etc
+    // this.id = 'd2';
     this.employees.push(employee);
   }
 
